@@ -6,8 +6,8 @@ Work in progress.
 
 ## To Do
 
-Mute Controls
-Solo Controls
-Full Shuttle Control
-Styling
-??
+* Mute Controls
+* Solo Controls
+* Full Shuttle Control
+* Styling
+* ??
