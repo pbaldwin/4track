@@ -37,26 +37,30 @@
 
   </header>
   <div role="main">
-    <audio autobuffer controls class="track">
+    <audio preload controls class="track">
       <source src="/assets/audio/Run-N-Gun-Drums-Stem.ogg">
       <source src="/assets/audio/Run-N-Gun-Drums-Stem.wav">
     </audio>
-    <audio autobuffer controls class="track">
+    <audio preload controls class="track">
       <source src="/assets/audio/Run-N-Gun-Bass-Stem.ogg">
       <source src="/assets/audio/Run-N-Gun-Bass-Stem.wav">
     </audio>
-    <audio autobuffer controls class="track">
+    <audio preload controls class="track">
       <source src="/assets/audio/Run-N-Gun-Rythm-Stem.ogg">
       <source src="/assets/audio/Run-N-Gun-Rythm-Stem.wav">
     </audio>
-    <audio autobuffer controls class="track">
+    <audio preload controls class="track">
       <source src="/assets/audio/Run-N-Gun-Lead-Stem.ogg">
       <source src="/assets/audio/Run-N-Gun-Lead-Stem.wav">
     </audio>
     <p>
       <a href="#play" rel="play" class="control-button">Play</a> | <a href="#pause" rel="pause" class="control-button">Pause</a> | <a href="#stop" rel="stop" class="control-button">Stop</a> 
     </p>
-    <div class="master-volume">0 <input type="range" min="-99" max="0" step="1" value="0" placeholder="" id="masterVolume" name="master"></div>
+    <div class="master-volume">Track 1 <input type="range" min="0" max="100" step="1" value="100" placeholder="" class="volume" name="track1"></div>
+    <div class="master-volume">Track 2 <input type="range" min="0" max="100" step="1" value="100" placeholder="" class="volume" name="track2"></div>
+    <div class="master-volume">Track 3 <input type="range" min="0" max="100" step="1" value="100" placeholder="" class="volume" name="track3"></div>
+    <div class="master-volume">Track 4 <input type="range" min="0" max="100" step="1" value="100" placeholder="" class="volume" name="track4"></div>
+    <div class="master-volume">Master <input type="range" min="-100" max="0" step="1" value="0" placeholder="" class="volume" name="master"></div>
   </div>
   <footer>
 
