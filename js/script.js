@@ -69,7 +69,7 @@ jQuery(document).ready(function($) {
 		}
 
 		volumeControl(controlName, controlLevel);
-		console.log(masterVolume);
+		//console.log(masterVolume);
 	});
 
 });
