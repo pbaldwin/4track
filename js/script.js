@@ -7,6 +7,7 @@ jQuery(document).ready(function($) {
 	var $tracks = $('.track'),
 		$playbackControls = $('.control-button'),
 		$volumeControls = $('.volume'),
+		$muteControls = $('.mute'),
 		masterVolume = 0,
 		currentTime = 0;
 
@@ -54,6 +55,16 @@ jQuery(document).ready(function($) {
 		}
 	}
 
+	function muteControl(control, mute) {
+		var track = $tracks[control.slice(5,6) - 1];
+		if (mute) {
+			track.muted = true;
+		} else {
+			track.muted = false;
+		}
+
+	}
+
 	$playbackControls.click( function() {
 		var controlName = $(this).attr('rel');
 		playbackControl(controlName);
@@ -70,6 +81,20 @@ jQuery(document).ready(function($) {
 
 		volumeControl(controlName, controlLevel);
 		//console.log(masterVolume);
+	});
+
+	$muteControls.click( function() {
+		var $this = $(this),
+			controlName = $this.attr('name'),
+			mute = false;
+
+		if ($this.is(':checked')) {
+			mute = true;
+		} else {
+			mute = false;
+		}
+
+		muteControl(controlName, mute);
 	});
 
 });
