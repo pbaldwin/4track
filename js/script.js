@@ -13,7 +13,7 @@ jQuery(document).ready(function($) {
 
 	// Sync time across all tracks.
 	function syncTime() {
-		for (i = 0; i < $tracks.length; i++) {
+		for (var i = 0; i < $tracks.length; i++) {
 			$tracks[i].currentTime = currentTime;
 		}
 	}
@@ -36,7 +36,7 @@ jQuery(document).ready(function($) {
 
 	function volumeControl(control, level) {
 		if (control === "master") {
-			for (i = 0; i < $tracks.length; i++) {
+			for (var i = 0; i < $tracks.length; i++) {
 				var trackLevel = $volumeControls.eq(i).attr('value') / 100 - masterVolume;
 				if ( trackLevel > 0 ) {
 					$tracks[i].volume = trackLevel;
@@ -45,8 +45,9 @@ jQuery(document).ready(function($) {
 				}
 			} 
 		} else {
-			var trackNumber = control.slice(5,6) - 1,
-			level = level / 100 - masterVolume;
+			var trackNumber = control.slice(5,6) - 1;
+			
+            level = level / 100 - masterVolume;
 			if (level > 0) {
 				$tracks[trackNumber].volume = level;
 			} else {
